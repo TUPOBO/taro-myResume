@@ -70,11 +70,7 @@ export default class Index extends Component {
                   key={project.id}
                   title={project.title}
                   arrow='right'
-                  iconInfo={{
-                    size: 25,
-                    color: '#78A4FA',
-                    value: 'calendar'
-                  }}
+                  thumb={project.thumb}
                 />
               ))}
             </AtList>
