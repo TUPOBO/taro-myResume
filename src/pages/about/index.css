@@ -1,0 +1,26 @@
+.index {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+image {
+  height: 300px;
+  border-radius: 80%;
+  opacity: 1;
+  transition: opacity 5s;
+}
+
+.container {
+  margin-top: 100px;
+  margin-bottom: 50px;
+}
+
+Text {
+  font-size: 32px;
+  opacity: 0.8;
+  font-family: 楷体;
+  font-weight: bold;
+  margin-bottom: 20px;
+}

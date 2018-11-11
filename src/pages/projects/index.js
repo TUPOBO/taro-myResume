@@ -1,23 +1,13 @@
 import Taro, { Component } from '@tarojs/taro'
 import { View, Swiper, SwiperItem, Image } from '@tarojs/components'
-import { AtAccordion, AtList, AtListItem } from 'taro-ui'
-import projects from '../../projects'
+import { swiperItem } from '../../projects'
 import './index.css'
+import Accordion from './Accordion'
 
 export default class Index extends Component {
   config = {
     navigationBarTitleText: '实战项目'
   }
-
-  componentWillMount() {}
-
-  componentDidMount() {}
-
-  componentWillUnmount() {}
-
-  componentDidShow() {}
-
-  componentDidHide() {}
 
   render() {
     return (
@@ -31,51 +21,16 @@ export default class Index extends Component {
           autoplay
           style='height: 180px;'
         >
-          <SwiperItem>
-            <Image
-              style='height: 180px;width:400px;background: #fff;'
-              src='../../images/banner/Vanilla-JS.png'
-            />
-          </SwiperItem>
-          <SwiperItem>
-            <View className='demo-text-2'>
+          {swiperItem.map(item => (
+            <SwiperItem id={item.id} key={item.title} onClick={this.onClick}>
               <Image
                 style='height: 180px;width:400px;background: #fff;'
-                src='../../images/banner/react.png'
+                src={item.src}
               />
-            </View>
-          </SwiperItem>
-          <SwiperItem>
-            <View className='demo-text-3'>
-              <Image
-                style='height: 180px;width:400px;background: #fff;'
-                src='../../images/banner/vue.png'
-              />
-            </View>
-          </SwiperItem>
-          <SwiperItem>
-            <View className='demo-text-4'>
-              <Image
-                style='height: 180px;width:400px;background: #fff;'
-                src='../../images/banner/xcx.jpg'
-              />
-            </View>
-          </SwiperItem>
+            </SwiperItem>
+          ))}
         </Swiper>
-        {projects.map(item => (
-          <AtAccordion open key={item.title} title={item.title}>
-            <AtList>
-              {item.projects.map(project => (
-                <AtListItem
-                  key={project.id}
-                  title={project.title}
-                  arrow='right'
-                  thumb={project.thumb}
-                />
-              ))}
-            </AtList>
-          </AtAccordion>
-        ))}
+        <Accordion />
       </View>
     )
   }

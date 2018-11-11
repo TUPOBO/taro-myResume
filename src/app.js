@@ -5,7 +5,12 @@ import './app.css'
 
 class App extends Component {
   config = {
-    pages: ['pages/about/index', 'pages/skills/index', 'pages/projects/index'],
+    pages: [
+      'pages/about/index',
+      'pages/skills/index',
+      'pages/projects/index',
+      'pages/details/index'
+    ],
     window: {
       backgroundTextStyle: 'light',
       navigationBarBackgroundColor: '#fff',
