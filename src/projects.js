@@ -45,12 +45,12 @@ export const projects = [
     projects: [
       {
         title: '计算器',
-        id: 8,
+        id: 6,
         thumb: '/images/projects-icons/jisuan.png'
       },
       {
         title: 'Todo',
-        id: 9,
+        id: 7,
         thumb: '/images/projects-icons/list.png'
       }
     ]
@@ -60,12 +60,12 @@ export const projects = [
     projects: [
       {
         title: '涂魄读书',
-        id: 6,
+        id: 8,
         thumb: '/images/projects-icons/book.png'
       },
       {
         title: '前端工程师简历',
-        id: 7,
+        id: 9,
         thumb: '/images/projects-icons/resume.png'
       }
     ]

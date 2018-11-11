@@ -1,6 +1,6 @@
 import Taro, { Component } from '@tarojs/taro'
-import { View, Image } from '@tarojs/components'
-import { AtBadge, AtButton } from 'taro-ui'
+import { View, Image, Text } from '@tarojs/components'
+import { AtBadge, AtTag, AtTimeline } from 'taro-ui'
 import details from '../../details'
 
 export default class Index extends Component {
@@ -25,19 +25,37 @@ export default class Index extends Component {
   render() {
     const index = +this.state.id
     const skills = details[index].skills
+    const content = details[index].content
     return (
       <View className='index'>
-        <Image
-          style='width: 410px;height: 180px;background: #fff;'
-          src={details[index].image}
-        />
+        <View className='image'>
+          <Image
+            style='width: 410px;height: 180px;background: #fff;'
+            src={details[index].image}
+          />
+        </View>
         <AtBadge>
-          {skills.map(skill => (
-            <AtButton type='secondary' size='small' key={skill}>
-              {skill}
-            </AtButton>
-          ))}
+          <View className='tags'>
+            {skills.map(skill => (
+              <View className='tag' key={skill}>
+                <AtTag name={skill} type='primary' circle>
+                  <span>{skill}</span>
+                </AtTag>
+              </View>
+            ))}
+          </View>
         </AtBadge>
+        <View className='text'>
+          <Text>{content}</Text>
+        </View>
+        <AtTimeline
+          items={[
+            { title: '刷牙洗脸' },
+            { title: '吃早餐' },
+            { title: '上班' },
+            { title: '睡觉' }
+          ]}
+        />
       </View>
     )
   }

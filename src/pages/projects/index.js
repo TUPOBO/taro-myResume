@@ -30,6 +30,7 @@ export default class Index extends Component {
             </SwiperItem>
           ))}
         </Swiper>
+
         <Accordion />
       </View>
     )

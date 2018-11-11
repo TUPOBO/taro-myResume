@@ -4,7 +4,8 @@ const details = [
     title: '弹珠游戏',
     image: '/images/details/ball.jpg',
     skills: ['JavaScript', 'Canvas', '面向对象'],
-    content: '',
+    content: `本项目使用原生JavaScript和HTML5的Canvas，利用面向对象的原理实现了一个简易的弹珠游戏.该游戏实现了游戏开始界面，游戏暂停和不同级别的关卡
+    `,
     gitHub: 'hahaha'
   },
   {
@@ -12,14 +13,16 @@ const details = [
     title: '青蛙跳河',
     image: '/images/details/frog.jpg',
     skills: ['JavaScript', 'Canvas', '面向对象'],
-    content: '',
+    content: `本项目使用原生JavaScript和HTML5的Canvas，利用面向对象的原理实现了一个简易的弹珠游戏
+              该游戏实现了游戏开始界面，游戏暂停和不同级别的关卡
+    `,
     gitHub: 'hahaha'
   },
   {
     id: 2,
     title: '记忆游戏',
     image: '/images/details/brain.jpg',
-    skills: ['JavaScript', 'Canvas', '面向对象', 'Animate.css'],
+    skills: ['JavaScript', 'Canvas', '面向对象', 'Animate'],
     content: '',
     gitHub: 'hahaha'
   },
@@ -58,7 +61,7 @@ const details = [
   {
     id: 7,
     title: 'TodoList',
-    image: '/images/details/dog.jpg',
+    image: '/images/details/list.jpg',
     skills: ['Vue', 'Webpack'],
     content: '',
     gitHub: 'hahaha'
