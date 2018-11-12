@@ -16,7 +16,11 @@ export default class Index extends Component {
       show: false
     }
   }
-
+  componentWillMount() {
+    wx.showShareMenu({
+      withShareTicket: true
+    })
+  }
   onClick = () => {
     this.setState(
       {

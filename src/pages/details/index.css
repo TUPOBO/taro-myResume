@@ -13,9 +13,24 @@
 
 .tag {
   margin-right: 10px;
+  margin-top: 10px;
   display: inline-block;
 }
 
-span {
-  color: #d81e06;
+.border {
+  height: 20px;
+  background: #aaa;
+  opacity: 0.1;
+}
+
+.at-card-header__title {
+  /* color: #d81e06; */
+  font-weight: bold;
+}
+
+.button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
 }

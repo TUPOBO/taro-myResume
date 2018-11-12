@@ -8,7 +8,11 @@ export default class Index extends Component {
   config = {
     navigationBarTitleText: '实战项目'
   }
-
+  componentWillMount() {
+    wx.showShareMenu({
+      withShareTicket: true
+    })
+  }
   render() {
     return (
       <View className='index'>

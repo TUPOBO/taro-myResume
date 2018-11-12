@@ -5,29 +5,17 @@ import skills from '../../skills'
 import './index.css'
 
 export default class Index extends Component {
-  config = {
-    navigationBarTitleText: '开发技能'
-  }
+  config = { navigationBarTitleText: '开发技能' }
   constructor() {
     super(...arguments)
-    this.state = {
-      current: 0
-    }
+    this.state = { current: 0 }
   }
   handleClick(value) {
-    this.setState({
-      current: value
-    })
+    this.setState({ current: value })
   }
-  componentWillMount() {}
-
-  componentDidMount() {}
-
-  componentWillUnmount() {}
-
-  componentDidShow() {}
-
-  componentDidHide() {}
+  componentWillMount() {
+    wx.showShareMenu()
+  }
 
   render() {
     const tabList = [{ title: '语言' }, { title: '框架' }, { title: '工具' }]
